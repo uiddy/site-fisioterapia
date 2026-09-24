@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 700" role="img" aria-labelledby="title desc">
+  <title id="title">FisioCampos</title>
+  <desc id="desc">Logo FisioCampos Clinica de Fisioterapia</desc>
+  <defs>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d249f"/>
+      <stop offset="1" stop-color="#7a0099"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16b7a8"/>
+      <stop offset="1" stop-color="#00a396"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M366 43C245 31 142 105 119 217c-21 104 29 190 111 236-48-40-75-96-75-157 0-112 91-203 211-253Z" stroke="url(#purple)" stroke-width="18"/>
+    <path d="M502 30c-10 58-44 99-103 135-26 16-39 38-35 75 14-35 35-55 70-76 47-28 65-65 68-134Z" fill="url(#purple)" stroke="url(#purple)" stroke-width="4"/>
+    <circle cx="382" cy="125" r="29" fill="url(#purple)" stroke="url(#purple)" stroke-width="4"/>
+    <path d="M185 116c79 1 140 42 157 104 16 60-13 105-60 143-38 31-61 70-56 118-2-69 25-116 62-155 38-40 45-84 16-128-27-42-67-68-119-82Z" fill="url(#purple)" stroke="url(#purple)" stroke-width="5"/>
+    <path d="M255 162c-26 71-28 158-22 275" stroke="url(#teal)" stroke-width="15" stroke-dasharray="1 28"/>
+    <path d="M509 116c56 54 77 123 60 192-24 99-100 160-201 163-43 1-85-8-116-25 31-41 75-67 121-73-14 17-30 27-53 34 39 20 83 8 111-26 13-16 24-26 43-34-15 39-38 66-70 84 47-5 82-34 112-72" stroke="url(#teal)" stroke-width="18"/>
+    <path d="M249 463c42-52 89-69 145-78 37-6 66-18 88-39-5 31-30 53-70 64-43 12-83 26-163 53Z" fill="url(#teal)" stroke="url(#teal)" stroke-width="4"/>
+  </g>
+  <g font-family="Montserrat, Arial, sans-serif" font-size="94" font-weight="500" letter-spacing="-4">
+    <text x="44" y="590" fill="url(#purple)">Fisio</text>
+    <text x="298" y="590" fill="url(#teal)">Campos</text>
+  </g>
+  <path d="M48 630h100M610 630h102" stroke="#7a0099" stroke-width="4"/>
+  <text x="175" y="638" fill="#00a396" font-family="Montserrat, Arial, sans-serif" font-size="23" letter-spacing="7">CLINICA DE FISIOTERAPIA</text>
+</svg>
