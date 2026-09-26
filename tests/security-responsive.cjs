@@ -5,8 +5,9 @@ const http = require('node:http');
 const { chromium } = require('playwright-core');
 
 const root = path.resolve(__dirname, '..');
+const publicDir = path.join(root, 'public');
 const output = path.join(root, 'test-results');
-const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const html = fs.readFileSync(path.join(publicDir, 'index.html'), 'utf8');
 const mime = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.jpeg': 'image/jpeg', '.jpg': 'image/jpeg' };
 const report = { viewports: [], checks: [], accessibility: [], errors: [] };
 fs.mkdirSync(output, { recursive: true });
@@ -15,8 +16,8 @@ fs.mkdirSync(output, { recursive: true });
 const server = http.createServer((req, res) => {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
     const filename = pathname === '/' ? 'index.html' : pathname.slice(1);
-    const file = path.resolve(root, filename);
-    if (path.dirname(file) !== root || !mime[path.extname(file)] || !fs.existsSync(file)) {
+    const file = path.resolve(publicDir, filename);
+    if (path.dirname(file) !== publicDir || !mime[path.extname(file)] || !fs.existsSync(file)) {
         res.writeHead(404).end();
         return;
     }
