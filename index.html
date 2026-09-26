@@ -2,121 +2,26 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self'; connect-src 'none'">
+    <link rel="icon" href="logo-fisiocampos-simbolo.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FisioCampos - Clínica de Fisioterapia em Campina Grande do Sul</title>
     <meta name="description" content="Clínica de Fisioterapia FisioCampos. Pois a vida precisa de movimento. Mais movimento, menos dor e mais qualidade de vida em Campina Grande do Sul, PR.">
-    
-    <!-- Tailwind CSS para Estilização Rápida e Responsiva -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+
+    <!-- CSS gerado localmente; fonte em styles.source.css -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+
     <!-- Font Awesome para Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Montserrat para títulos, Inter para textos, Caveat para replicar o slogan manuscrito -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Configuração de Cores Personalizadas (Extraídas da Logomarca) -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple': '#7A0099', // Roxo vibrante da logo
-                        'brand-teal': '#00A396',   // Turquesa/Verde-água da logo
-                        'brand-purple-light': '#9e2dbd',
-                        'brand-teal-light': '#14c9ba',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                        cursive: ['Caveat', 'cursive'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Estilos CSS Customizados para detalhes específicos -->
-    <style>
-        .header-wordmark {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            font-family: 'Montserrat', sans-serif;
-            white-space: nowrap;
-        }
-
-        .header-wordmark-name {
-            font-size: 28px;
-            font-weight: 400;
-            letter-spacing: -1.2px;
-            line-height: 1.1;
-        }
-
-        .header-wordmark-purple { color: #9400a8; }
-        .header-wordmark-teal { color: #00bfae; }
-
-        .header-wordmark-subtitle {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: #00bfae;
-            font-size: 6px;
-            font-weight: 500;
-            letter-spacing: 1.3px;
-            text-transform: uppercase;
-        }
-
-        .header-wordmark-subtitle::before,
-        .header-wordmark-subtitle::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: currentColor;
-        }
-
-        .header-wordmark-subtitle::before { background: #9400a8; }
-
-        @media (min-width: 640px) {
-            .header-wordmark-name { font-size: 40px; }
-            .header-wordmark-subtitle {
-                gap: 8px;
-                font-size: 8px;
-                letter-spacing: 2px;
-            }
-        }
-
-        /* Gradiente suave para o fundo da primeira sessão */
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(243,244,246,1) 100%);
-            position: relative;
-        }
-        
-        /* Formas orgânicas no fundo para não ficar quadrado/chapado */
-        .shape-blob {
-            position: absolute;
-            background: rgba(0, 163, 150, 0.05); /* Turquesa bem clarinho */
-            border-radius: 50%;
-            filter: blur(40px);
-            z-index: 0;
-        }
-        
-        /* Aumentar o espaçamento do menu quando rolar a página */
-        .nav-scrolled {
-            background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
-
-        /* Efeito de hover nas fotos de serviço */
-        .service-card:hover img {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
 <body class="font-sans text-gray-700 bg-gray-50 antialiased overflow-x-hidden">
 
@@ -124,7 +29,7 @@
     <header id="navbar" class="fixed w-full z-50 top-0 transition-all duration-300 py-3 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
-                
+
                 <!-- Logo -->
                 <a href="#inicio" class="flex items-center gap-2 sm:gap-3 shrink-0" aria-label="Fisio Campos — Clínica de Fisioterapia — início">
                     <img src="logo-fisiocampos-simbolo.svg" alt="" width="490" height="475" class="h-11 sm:h-16 md:h-[4.5rem] w-auto">
@@ -135,46 +40,51 @@
                 </a>
 
                 <!-- Menu Desktop -->
-                <nav class="hidden xl:flex space-x-8 items-center">
+                <nav aria-label="Navegação principal" class="hidden xl:flex space-x-8 items-center">
                     <a href="#inicio" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">Início</a>
                     <a href="#sobre" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">A Clínica</a>
                     <a href="#horarios" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">Horários</a>
                     <a href="#contato" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">Contato</a>
                     <!-- Botão de WhatsApp principal -->
-                    <a href="https://wa.me/554197110334" target="_blank" class="bg-brand-teal hover:bg-brand-teal-light text-white px-6 py-2.5 rounded-md font-medium transition-all shadow-sm hover:shadow-md flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Consulta
+                    <a href="https://wa.me/554197110334" target="_blank" rel="noopener noreferrer" class="bg-brand-teal hover:bg-brand-teal-light text-[#052b27] px-6 py-2.5 rounded-md font-medium transition-all shadow-sm hover:shadow-md flex items-center gap-2">
+                        <i aria-hidden="true" class="fa-brands fa-whatsapp text-lg"></i> Agendar Consulta
                     </a>
                 </nav>
 
                 <!-- Botão Menu Mobile -->
                 <div class="xl:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-brand-purple focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                    <button id="mobile-menu-btn" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" class="text-brand-purple p-2 min-w-11 min-h-11">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Menu Mobile (Escondido por padrão) -->
-        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 top-full">
+        <nav aria-label="Navegação mobile" id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 top-full">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Início</a>
                 <a href="#sobre" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">A Clínica</a>
                 <a href="#horarios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Horários</a>
                 <a href="#contato" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Contato</a>
-                <a href="https://wa.me/554197110334" class="mt-4 w-full flex justify-center items-center gap-2 bg-brand-teal text-white px-6 py-3 rounded-md font-medium shadow-sm">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Agora
+                <a href="https://wa.me/554197110334" class="mt-4 w-full flex justify-center items-center gap-2 bg-brand-teal text-[#052b27] px-6 py-3 rounded-md font-medium shadow-sm">
+                    <i aria-hidden="true" class="fa-brands fa-whatsapp text-lg"></i> Agendar Agora
                 </a>
             </div>
-        </div>
+        </nav>
     </header>
+
+    <main id="conteudo">
+    <h1 class="sr-only">FisioCampos — Clínica de Fisioterapia em Campina Grande do Sul</h1>
 
     <!-- APRESENTAÇÃO DA FISIOTERAPEUTA -->
     <section id="inicio" aria-label="Nossa fisioterapeuta" class="pt-32 md:pt-40 pb-4 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <figure class="relative max-w-lg mx-auto overflow-hidden rounded-tr-[80px] rounded-bl-[80px] shadow-xl">
                 <img src="fisioterapeuta.jpeg" alt="Drª Nara Priscila Campos realizando atendimento de fisioterapia" width="1792" height="2390" fetchpriority="high" class="block w-full h-auto">
-                <figcaption class="absolute top-4 sm:top-6 inset-x-4 sm:inset-x-8 bg-transparent text-center text-xs sm:text-sm leading-relaxed font-medium text-[#b000a5]">
+                <figcaption class="pointer-events-none absolute top-2 sm:top-6 inset-x-4 sm:inset-x-8 bg-transparent text-center text-xs sm:text-sm leading-relaxed font-medium text-[#b000a5]">
                     <span class="inline-block">Drª Nara Priscila Campos</span>
                     <span class="inline-block">CREFITO: 202965-F</span>
                 </figcaption>
@@ -192,23 +102,23 @@
         <div class="bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] px-2 py-5 sm:p-6 border border-gray-100">
             <div class="grid grid-cols-3 divide-x divide-gray-100">
 
-                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 px-2 md:px-6 text-center md:text-left">
+                <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 px-2 lg:px-6 text-center lg:text-left">
                     <div class="w-12 h-12 rounded-full border border-brand-purple flex items-center justify-center text-brand-purple bg-purple-50 shrink-0">
-                        <i class="fa-solid fa-person-walking"></i>
+                        <i aria-hidden="true" class="fa-solid fa-person-walking"></i>
                     </div>
                     <span class="font-heading text-xs sm:text-sm md:text-base font-semibold text-gray-800">Mais movimento</span>
                 </div>
 
-                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 px-2 md:px-6 text-center md:text-left">
+                <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 px-2 lg:px-6 text-center lg:text-left">
                     <div class="w-12 h-12 rounded-full border border-brand-teal flex items-center justify-center text-brand-teal bg-teal-50 shrink-0">
-                        <i class="fa-solid fa-child-reaching"></i>
+                        <i aria-hidden="true" class="fa-solid fa-child-reaching"></i>
                     </div>
                     <span class="font-heading text-xs sm:text-sm md:text-base font-semibold text-gray-800">Menos dor</span>
                 </div>
 
-                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 px-2 md:px-6 text-center md:text-left">
+                <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 px-2 lg:px-6 text-center lg:text-left">
                     <div class="w-12 h-12 rounded-full border border-brand-purple flex items-center justify-center text-brand-purple bg-purple-50 shrink-0">
-                        <i class="fa-regular fa-heart"></i>
+                        <i aria-hidden="true" class="fa-regular fa-heart"></i>
                     </div>
                     <span class="font-heading text-xs sm:text-sm md:text-base font-semibold text-gray-800">Mais qualidade de vida</span>
                 </div>
@@ -225,10 +135,10 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl mx-auto">
-                
+
                 <!-- Textos -->
                 <div class="w-full text-center">
-                    
+
                     <!-- Slogan com a tipografia inspirada na imagem -->
                     <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-2">
                         Pois a <span class="font-cursive text-brand-purple text-6xl md:text-7xl font-normal lowercase tracking-wide">vida</span>
@@ -243,14 +153,14 @@
                             </svg>
                         </span>
                     </h2>
-                    
+
                     <p class="mt-8 text-lg text-gray-600 mb-8 max-w-lg mx-auto">
                         Atendimento humanizado e reabilitação especializada para você voltar a realizar suas atividades diárias sem limitações.
                     </p>
-                    
+
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="https://wa.me/554197110334" class="bg-brand-purple hover:bg-brand-purple-light text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> Fale com a Recepção
+                            <i aria-hidden="true" class="fa-brands fa-whatsapp text-xl"></i> Fale com a Recepção
                         </a>
                     </div>
                 </div>
@@ -263,7 +173,7 @@
     <section id="sobre" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-                
+
                 <!-- Galeria: fotos inteiras no celular e duas colunas em telas maiores -->
                 <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                     <img src="imgdentro.jpeg" alt="Equipamentos de fisioterapia" width="2390" height="1792" loading="lazy" class="block rounded-lg shadow-md w-full h-auto sm:h-56 lg:h-64 object-cover">
@@ -282,18 +192,18 @@
                     <p class="text-gray-600 mb-8 leading-relaxed">
                         Diferente de atendimentos rápidos e impessoais, aqui nós avaliamos a origem da sua dor para traçar um plano de tratamento único. Nosso objetivo não é apenas aliviar os sintomas momentaneamente, mas devolver a sua autonomia.
                     </p>
-                    
+
                     <div class="bg-gray-50 border-l-4 border-brand-purple p-6 rounded-r-lg">
                         <h4 class="font-bold text-gray-900 mb-2">Por que escolher a FisioCampos?</h4>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-2 text-gray-700 text-sm">
-                                <i class="fa-solid fa-check text-brand-teal"></i> Abordagem individualizada
+                                <i aria-hidden="true" class="fa-solid fa-check text-brand-teal"></i> Abordagem individualizada
                             </li>
                             <li class="flex items-center gap-2 text-gray-700 text-sm">
-                                <i class="fa-solid fa-check text-brand-teal"></i> Profissionais registrados no CREFITO
+                                <i aria-hidden="true" class="fa-solid fa-check text-brand-teal"></i> Profissionais registrados no CREFITO
                             </li>
                             <li class="flex items-center gap-2 text-gray-700 text-sm">
-                                <i class="fa-solid fa-check text-brand-teal"></i> Localização acessível no Jardim Paulista
+                                <i aria-hidden="true" class="fa-solid fa-check text-brand-teal"></i> Localização acessível no Jardim Paulista
                             </li>
                         </ul>
                     </div>
@@ -311,38 +221,38 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
+
                 <!-- Card de Horários -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <div class="bg-white p-5 sm:p-8 rounded-xl shadow-sm border border-gray-100">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="bg-brand-purple p-3 rounded-lg text-white">
-                            <i class="fa-regular fa-clock text-xl"></i>
+                            <i aria-hidden="true" class="fa-regular fa-clock text-xl"></i>
                         </div>
                         <h3 class="font-heading font-bold text-xl text-gray-900">Horário de Funcionamento</h3>
                     </div>
-                    
+
                     <ul class="divide-y divide-gray-100">
-                        <li class="py-3 flex justify-between items-center">
+                        <li class="py-3 flex flex-wrap gap-x-3 gap-y-1 justify-between items-center">
                             <span class="text-gray-600 font-medium">Segunda-Feira</span>
                             <span class="text-gray-900">07:00 às 12:00</span>
                         </li>
-                        <li class="py-3 flex justify-between items-center">
+                        <li class="py-3 flex flex-wrap gap-x-3 gap-y-1 justify-between items-center">
                             <span class="text-gray-600 font-medium">Terça-Feira</span>
                             <span class="text-gray-900">13:00 às 18:00</span>
                         </li>
-                        <li class="py-3 flex justify-between items-center">
+                        <li class="py-3 flex flex-wrap gap-x-3 gap-y-1 justify-between items-center">
                             <span class="text-gray-600 font-medium">Quarta-Feira</span>
                             <span class="text-gray-900">07:00 às 12:00</span>
                         </li>
-                        <li class="py-3 flex justify-between items-center">
+                        <li class="py-3 flex flex-wrap gap-x-3 gap-y-1 justify-between items-center">
                             <span class="text-gray-600 font-medium">Quinta-Feira</span>
                             <span class="text-gray-900">13:00 às 18:00</span>
                         </li>
-                        <li class="py-3 flex justify-between items-center">
+                        <li class="py-3 flex flex-wrap gap-x-3 gap-y-1 justify-between items-center">
                             <span class="text-gray-600 font-medium">Sexta-Feira</span>
                             <span class="text-gray-900">07:00 às 12:00</span>
                         </li>
-                        <li class="py-3 flex justify-between items-center text-gray-400">
+                        <li class="py-3 flex flex-wrap gap-x-3 gap-y-1 justify-between items-center text-gray-600">
                             <span>Sábado e Domingo</span>
                             <span>Fechado</span>
                         </li>
@@ -350,10 +260,10 @@
                 </div>
 
                 <!-- Card de Localização -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <div class="bg-white p-5 sm:p-8 rounded-xl shadow-sm border border-gray-100">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="bg-brand-teal p-3 rounded-lg text-white">
-                            <i class="fa-solid fa-location-dot text-xl"></i>
+                            <i aria-hidden="true" class="fa-solid fa-location-dot text-xl"></i>
                         </div>
                         <h3 class="font-heading font-bold text-xl text-gray-900">Nosso Endereço</h3>
                     </div>
@@ -367,11 +277,11 @@
 
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center gap-3 text-gray-800 font-medium">
-                            <i class="fa-solid fa-phone text-brand-purple"></i> Fixo: (41) 3679-2756
+                            <i aria-hidden="true" class="fa-solid fa-phone text-brand-purple"></i> Fixo: (41) 3679-2756
                         </div>
-                        
-                        <a href="https://maps.google.com/?q=Rua+Augusto+Staben,+2201+-+Jardim+Paulista,+Campina+Grande+do+Sul+-+PR" target="_blank" class="mt-4 w-full text-center border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-4 py-3 rounded-md font-medium transition-colors">
-                            <i class="fa-solid fa-map-location-dot mr-2"></i> Ver no Google Maps
+
+                        <a href="https://maps.google.com/?q=Rua+Augusto+Staben,+2201+-+Jardim+Paulista,+Campina+Grande+do+Sul+-+PR" target="_blank" rel="noopener noreferrer" class="mt-4 w-full text-center border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-[#052b27] px-4 py-3 rounded-md font-medium transition-colors">
+                            <i aria-hidden="true" class="fa-solid fa-map-location-dot mr-2"></i> Ver no Google Maps
                         </a>
                     </div>
                 </div>
@@ -381,42 +291,43 @@
     </section>
 
     <!-- BANNER CALL TO ACTION -->
-    <section class="bg-brand-purple py-16 relative overflow-hidden">
-        <!-- Fundo sutil -->
-        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(45deg, #7A0099 25%, #9e2dbd 25%, #9e2dbd 50%, #7A0099 50%, #7A0099 75%, #9e2dbd 75%, #9e2dbd 100%); background-size: 20px 20px;"></div>
-        
+    <section class="appointment-banner py-16 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Sente alguma dor que limita seu dia a dia?</h2>
-            <p class="text-purple-100 text-lg mb-8">Nossa equipe de fisioterapia está pronta para avaliar seu caso e devolver a sua qualidade de vida.</p>
-            <a href="https://wa.me/554197110334" class="inline-flex items-center gap-2 bg-white text-brand-purple hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg transform hover:-translate-y-1">
-                <i class="fa-brands fa-whatsapp text-2xl text-[#25D366]"></i> Agendar Avaliação
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Sente alguma dor que limita seu dia a dia?</h2>
+            <p class="appointment-description text-lg mb-8">Nossa equipe de fisioterapia está pronta para avaliar seu caso e devolver a sua qualidade de vida.</p>
+            <a href="https://wa.me/554197110334" class="appointment-button inline-flex items-center gap-2 px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg transform hover:-translate-y-1">
+                <i aria-hidden="true" class="fa-brands fa-whatsapp text-2xl"></i> Agendar Avaliação
             </a>
         </div>
     </section>
 
+    </main>
+
     <!-- RODAPÉ -->
-    <footer id="contato" class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <footer id="contato" class="site-footer pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-gray-800 pb-12">
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 border-b footer-divider pb-12">
+
                 <!-- Logo Footer -->
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <i class="fa-solid fa-person-running text-brand-purple text-xl"></i>
-                        <h2 class="font-heading text-2xl font-bold text-white">
-                            <span class="text-brand-purple">Fisio</span><span class="text-brand-teal">Campos</span>
-                        </h2>
-                    </div>
-                    <p class="text-sm text-gray-400 mb-6 max-w-xs">Clínica especializada em reabilitação física. Pois a vida precisa de movimento.</p>
+                <div class="md:col-span-2 lg:col-span-1">
+                    <a href="#inicio" class="inline-flex items-center gap-3 mb-5" aria-label="FisioCampos — início">
+                        <img src="logo-fisiocampos-simbolo.svg" alt="" width="490" height="475" loading="lazy" class="w-16 h-16 p-2 bg-white rounded-2xl object-contain shrink-0">
+                        <div>
+                            <h2 class="footer-brand-name"><span class="footer-purple">Fisio</span><span class="footer-teal">Campos</span></h2>
+                            <p class="footer-brand-subtitle">Clínica de Fisioterapia</p>
+                        </div>
+                    </a>
+                    <p class="font-cursive text-2xl footer-purple mb-2">Pois a vida precisa de movimento.</p>
+                    <p class="text-sm footer-muted leading-relaxed mb-6 max-w-xs">Cuidado humanizado para mais movimento, menos dor e mais qualidade de vida.</p>
                 </div>
 
                 <!-- Links Rápidos -->
                 <div>
                     <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Navegação</h3>
                     <ul class="space-y-2">
-                        <li><a href="#inicio" class="text-gray-400 hover:text-brand-teal transition-colors text-sm">Início</a></li>
-                        <li><a href="#sobre" class="text-gray-400 hover:text-brand-teal transition-colors text-sm">Nossa Estrutura</a></li>
-                        <li><a href="#horarios" class="text-gray-400 hover:text-brand-teal transition-colors text-sm">Horários</a></li>
+                        <li><a href="#inicio" class="footer-muted hover:text-teal-200 transition-colors text-sm">Início</a></li>
+                        <li><a href="#sobre" class="footer-muted hover:text-teal-200 transition-colors text-sm">Nossa Estrutura</a></li>
+                        <li><a href="#horarios" class="footer-muted hover:text-teal-200 transition-colors text-sm">Horários</a></li>
                     </ul>
                 </div>
 
@@ -424,59 +335,39 @@
                 <div>
                     <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Fale Conosco</h3>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-sm text-gray-400">
-                            <i class="fa-solid fa-phone text-brand-teal"></i> (41) 3679-2756
+                        <li class="flex items-center gap-3 text-sm footer-muted">
+                            <i aria-hidden="true" class="fa-solid fa-phone footer-teal"></i> (41) 3679-2756
                         </li>
-                        <li class="flex items-center gap-3 text-sm text-gray-400">
-                            <i class="fa-brands fa-whatsapp text-brand-teal"></i> <a href="https://wa.me/554197110334" target="_blank" class="hover:text-brand-teal transition-colors">(41) 97110-334</a> 
+                        <li class="flex items-center gap-3 text-sm footer-muted">
+                            <i aria-hidden="true" class="fa-brands fa-whatsapp footer-teal"></i> <a href="https://wa.me/554197110334" target="_blank" rel="noopener noreferrer" class="hover:text-teal-200 transition-colors">(41) 97110-334</a>
                         </li>
-                        <li class="flex items-start gap-3 text-sm text-gray-400">
-                            <i class="fa-solid fa-location-dot text-brand-teal mt-1"></i> R. Augusto Staben, 2201 - Jd. Paulista<br>Campina Grande do Sul
+                        <li class="flex items-start gap-3 text-sm footer-muted">
+                            <i aria-hidden="true" class="fa-solid fa-location-dot footer-teal mt-1"></i> R. Augusto Staben, 2201 - Jd. Paulista<br>Campina Grande do Sul
                         </li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs footer-muted">
                 <p>&copy; 2026 FisioCampos. Todos os direitos reservados.</p>
-                <p class="mt-2 md:mt-0">Desenvolvido com <i class="fa-solid fa-heart text-brand-purple"></i> para a saúde</p>
+                <p class="mt-2 md:mt-0">Desenvolvido com <i aria-hidden="true" class="fa-solid fa-heart footer-purple"></i> para a saúde</p>
             </div>
         </div>
     </footer>
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me/554197110334" target="_blank" aria-label="Fale conosco no WhatsApp" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform z-50">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/554197110334" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp" class="whatsapp-float fixed bottom-6 right-6 bg-[#25D366] text-[#052b27] w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform z-50">
+        <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPTS PARA INTERATIVIDADE BÁSICA -->
-    <script>
-        // Lógica do Menu Mobile
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+    <!-- Visualização ampliada das imagens -->
+    <dialog id="image-viewer" class="image-viewer" aria-label="Imagem ampliada">
+        <button type="button" class="image-viewer-close" autofocus>Fechar ×</button>
+        <figure>
+            <img id="image-viewer-photo" alt="">
+            <figcaption id="image-viewer-caption"></figcaption>
+        </figure>
+    </dialog>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Fechar menu mobile ao clicar num link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Efeito visual no cabeçalho ao rolar a página
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                header.classList.add('nav-scrolled');
-                header.classList.remove('py-3');
-            } else {
-                header.classList.remove('nav-scrolled');
-                header.classList.add('py-3');
-            }
-        });
-    </script>
 </body>
 </html>
