@@ -170,15 +170,50 @@
     </header>
 
     <!-- APRESENTAÇÃO DA FISIOTERAPEUTA -->
-    <section id="inicio" aria-label="Nossa fisioterapeuta" class="pt-32 pb-12 md:pt-40 md:pb-16 bg-white">
+    <section id="inicio" aria-label="Nossa fisioterapeuta" class="pt-32 md:pt-40 pb-4 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <figure class="relative max-w-lg mx-auto overflow-hidden rounded-tr-[80px] rounded-bl-[80px] shadow-xl">
                 <img src="fisioterapeuta.jpeg" alt="Drª Nara Priscila Campos realizando atendimento de fisioterapia" width="1792" height="2390" fetchpriority="high" class="block w-full h-auto">
-                <figcaption class="absolute bottom-6 inset-x-4 sm:inset-x-8 rounded-lg bg-white/95 px-4 py-3 text-center text-sm sm:text-base font-medium text-[#b000a5] shadow-sm">
+                <figcaption class="absolute top-4 sm:top-6 inset-x-4 sm:inset-x-8 bg-transparent text-center text-xs sm:text-sm leading-relaxed font-medium text-[#b000a5]">
                     <span class="inline-block">Drª Nara Priscila Campos</span>
                     <span class="inline-block">CREFITO: 202965-F</span>
                 </figcaption>
             </figure>
+        </div>
+    </section>
+
+    <!-- BARRA DE BENEFÍCIOS (Baseada na imagem) -->
+    <section id="beneficios" aria-label="Benefícios da fisioterapia" class="pt-8 pb-12 md:pb-16 max-w-5xl mx-auto px-4">
+        <div class="text-center mb-6">
+            <p class="inline-block bg-white px-4 py-1 rounded-full shadow-sm border border-gray-100 text-brand-teal font-semibold text-sm">
+                Jardim Paulista, Campina Grande do Sul
+            </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] px-2 py-5 sm:p-6 border border-gray-100">
+            <div class="grid grid-cols-3 divide-x divide-gray-100">
+
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 px-2 md:px-6 text-center md:text-left">
+                    <div class="w-12 h-12 rounded-full border border-brand-purple flex items-center justify-center text-brand-purple bg-purple-50 shrink-0">
+                        <i class="fa-solid fa-person-walking"></i>
+                    </div>
+                    <span class="font-heading text-xs sm:text-sm md:text-base font-semibold text-gray-800">Mais movimento</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 px-2 md:px-6 text-center md:text-left">
+                    <div class="w-12 h-12 rounded-full border border-brand-teal flex items-center justify-center text-brand-teal bg-teal-50 shrink-0">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <span class="font-heading text-xs sm:text-sm md:text-base font-semibold text-gray-800">Menos dor</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 px-2 md:px-6 text-center md:text-left">
+                    <div class="w-12 h-12 rounded-full border border-brand-purple flex items-center justify-center text-brand-purple bg-purple-50 shrink-0">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <span class="font-heading text-xs sm:text-sm md:text-base font-semibold text-gray-800">Mais qualidade de vida</span>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -193,9 +228,6 @@
                 
                 <!-- Textos -->
                 <div class="w-full text-center">
-                    <div class="inline-block bg-white px-4 py-1 rounded-full shadow-sm border border-gray-100 mb-6">
-                        <span class="text-brand-teal font-semibold text-sm"> Jardim Paulista, Campina Grande do Sul</span>
-                    </div>
                     
                     <!-- Slogan com a tipografia inspirada na imagem -->
                     <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-2">
@@ -227,51 +259,17 @@
         </div>
     </section>
 
-    <!-- BARRA DE BENEFÍCIOS (Baseada na imagem) -->
-    <section class="relative z-20 -mt-12 max-w-5xl mx-auto px-4">
-        <div class="bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] p-6 border border-gray-100">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-                
-                <div class="flex items-center gap-4 pt-2 md:pt-0 md:px-6 justify-center">
-                    <div class="w-12 h-12 rounded-full border border-brand-purple flex items-center justify-center text-brand-purple bg-purple-50 shrink-0">
-                        <i class="fa-solid fa-person-walking"></i>
-                    </div>
-                    <span class="font-heading font-semibold text-gray-800">Mais movimento</span>
-                </div>
-
-                <div class="flex items-center gap-4 pt-6 md:pt-0 md:px-6 justify-center">
-                    <div class="w-12 h-12 rounded-full border border-brand-teal flex items-center justify-center text-brand-teal bg-teal-50 shrink-0">
-                        <i class="fa-solid fa-child-reaching"></i>
-                    </div>
-                    <span class="font-heading font-semibold text-gray-800">Menos dor</span>
-                </div>
-
-                <div class="flex items-center gap-4 pt-6 md:pt-0 md:px-6 justify-center">
-                    <div class="w-12 h-12 rounded-full border border-brand-purple flex items-center justify-center text-brand-purple bg-purple-50 shrink-0">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <span class="font-heading font-semibold text-gray-800">Mais qualidade de vida</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- SOBRE A CLÍNICA -->
     <section id="sobre" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
                 
-                <!-- Fotos lado a lado -->
-                <div class="w-full lg:w-1/2 flex gap-4">
-                    <div class="w-1/2 mt-8">
-                        <img src="imgdentro.jpeg" alt="Equipamentos de fisioterapia" class="rounded-lg shadow-md w-full h-80 object-cover">
-                        <img src="ultimaaesquerda.jpeg" alt="Equipamentos de fisioterapia" class="rounded-lg shadow-md w-full h-80 object-cover">
-                    </div>
-                    <div class="w-1/2">
-                        <img src="frentedafisioterapia.jpeg" alt="Clínica por dentro" class="rounded-lg shadow-md w-full h-80 object-cover">
-                        <img src="imgultima.jpeg" alt="Clínica por dentro" class="rounded-lg shadow-md w-full h-80 object-cover">
-                    </div>
+                <!-- Galeria: fotos inteiras no celular e duas colunas em telas maiores -->
+                <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <img src="imgdentro.jpeg" alt="Equipamentos de fisioterapia" width="2390" height="1792" loading="lazy" class="block rounded-lg shadow-md w-full h-auto sm:h-56 lg:h-64 object-cover">
+                    <img src="frentedafisioterapia.jpeg" alt="Clínica por dentro" width="1280" height="797" loading="lazy" class="block rounded-lg shadow-md w-full h-auto sm:h-56 lg:h-64 object-cover">
+                    <img src="ultimaaesquerda.jpeg" alt="Equipamentos de fisioterapia" width="1080" height="1080" loading="lazy" class="block rounded-lg shadow-md w-full h-auto sm:h-56 lg:h-64 object-cover">
+                    <img src="imgultima.jpeg" alt="Clínica por dentro" width="1080" height="1080" loading="lazy" class="block rounded-lg shadow-md w-full h-auto sm:h-56 lg:h-64 object-cover">
                 </div>
 
                 <!-- Texto Sobre -->
