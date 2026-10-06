@@ -95,6 +95,34 @@ async function main() {
         }
         report.checks.push('14 dimensões, incluindo celulares em paisagem; menu com Esc, foco e rolagem');
 
+        // Os menus devem levar às seções sem esconder seu conteúdo sob o cabeçalho fixo.
+        const sections = ['inicio', 'tratamentos', 'sobre', 'profissional', 'depoimentos', 'horarios', 'duvidas', 'contato'];
+        await page.emulateMedia({ reducedMotion: 'reduce' });
+        for (const width of [320, 1440]) {
+            await page.setViewportSize({ width, height: 900 });
+            const navigation = page.locator(width < 1280 ? '#mobile-menu' : '.desktop-navigation');
+            assert.deepEqual(await navigation.locator('a[href^="#"]').evaluateAll(links => links.map(link => link.hash.slice(1))), sections);
+            for (const id of sections) {
+                if (width < 1280) await page.locator('#mobile-menu-btn').click();
+                await navigation.locator(`a[href="#${id}"]`).click();
+                assert.equal(new URL(page.url()).hash, `#${id}`);
+                if (id !== 'inicio') {
+                    const section = await page.locator(`#${id}`).boundingBox();
+                    const header = await page.locator('#navbar').boundingBox();
+                    assert(section.y >= header.y + header.height - 1, `Seção ${id} escondida pelo cabeçalho em ${width}px`);
+                }
+            }
+        }
+        const firstQuestion = page.locator('#duvidas summary').first();
+        await firstQuestion.focus();
+        await page.keyboard.press('Enter');
+        assert(await firstQuestion.evaluate(el => el.parentElement.open), 'FAQ abre pelo teclado');
+        await checkAccessibility(page, 'pergunta frequente aberta');
+        await page.keyboard.press('Enter');
+        assert(!(await firstQuestion.evaluate(el => el.parentElement.open)), 'FAQ fecha pelo teclado');
+        await page.emulateMedia({ reducedMotion: 'no-preference' });
+        report.checks.push('Oito seções acessíveis pelos menus mobile e desktop; FAQ operável por teclado');
+
         await page.setViewportSize({ width: 320, height: 568 });
         await checkAccessibility(page, 'mobile 320px');
         await page.locator('#mobile-menu-btn').click();
@@ -107,7 +135,7 @@ async function main() {
         await checkAccessibility(page, 'desktop 1440px');
 
         const normalColor = await page.locator('.appointment-button').evaluate(el => getComputedStyle(el).backgroundColor);
-        const headerColor = await page.locator('header nav a[href^="https:"]').first().evaluate(el => getComputedStyle(el).backgroundColor);
+        const headerColor = await page.locator('#navbar a[href^="https:"]').first().evaluate(el => getComputedStyle(el).backgroundColor);
         assert.equal(normalColor, headerColor, 'Mesmo verde nos dois botões');
         await page.locator('.appointment-button').hover();
         await page.waitForTimeout(250);
@@ -152,7 +180,7 @@ async function main() {
         await page.evaluate(() => scrollTo({top:0,behavior:'instant'}));
         await page.screenshot({ path: path.join(output, 'mobile.png'), fullPage: true });
         await page.screenshot({ path: path.join(output, 'mobile-top.png') });
-        for (const id of ['beneficios', 'sobre', 'horarios', 'contato']) {
+        for (const id of ['beneficios', 'tratamentos', 'sobre', 'profissional', 'depoimentos', 'horarios', 'duvidas', 'contato']) {
             await page.locator(`#${id}`).screenshot({ path: path.join(output, `mobile-${id}.png`) });
         }
         await page.setViewportSize({ width: 1440, height: 900 });

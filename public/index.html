@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self'; connect-src 'none'">
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self'; connect-src 'none'"-->   
     <link rel="icon" href="logo-fisiocampos-simbolo.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FisioCampos - Clínica de Fisioterapia em Campina Grande do Sul</title>
@@ -39,17 +39,9 @@
                     </span>
                 </a>
 
-                <!-- Menu Desktop -->
-                <nav aria-label="Navegação principal" class="hidden xl:flex space-x-8 items-center">
-                    <a href="#inicio" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">Início</a>
-                    <a href="#sobre" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">A Clínica</a>
-                    <a href="#horarios" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">Horários</a>
-                    <a href="#contato" class="text-gray-600 hover:text-brand-purple font-medium transition-colors">Contato</a>
-                    <!-- Botão de WhatsApp principal -->
-                    <a href="https://wa.me/554197110334" target="_blank" rel="noopener noreferrer" class="bg-brand-teal hover:bg-brand-teal-light text-[#052b27] px-6 py-2.5 rounded-md font-medium transition-all shadow-sm hover:shadow-md flex items-center gap-2">
-                        <i aria-hidden="true" class="fa-brands fa-whatsapp text-lg"></i> Agendar Consulta
-                    </a>
-                </nav>
+                <a href="https://wa.me/554197110334" target="_blank" rel="noopener noreferrer" class="hidden xl:flex bg-brand-teal hover:bg-brand-teal-light text-[#052b27] px-6 py-2.5 rounded-md font-medium transition-colors shadow-sm items-center gap-2">
+                    <i aria-hidden="true" class="fa-brands fa-whatsapp text-lg"></i> Agendar Consulta
+                </a>
 
                 <!-- Botão Menu Mobile -->
                 <div class="xl:hidden flex items-center">
@@ -60,14 +52,28 @@
                     </button>
                 </div>
             </div>
+            <nav aria-label="Navegação principal" class="desktop-navigation hidden xl:flex">
+                <a href="#inicio">Início</a>
+                <a href="#tratamentos">Tratamentos</a>
+                <a href="#sobre">A Clínica</a>
+                <a href="#profissional">Quem cuida de você (Drª Nara)</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#horarios">Horários e localização</a>
+                <a href="#duvidas">Dúvidas frequentes</a>
+                <a href="#contato">Contato</a>
+            </nav>
         </div>
 
         <!-- Menu Mobile (Escondido por padrão) -->
         <nav aria-label="Navegação mobile" id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 top-full">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Início</a>
+                <a href="#tratamentos" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Tratamentos</a>
                 <a href="#sobre" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">A Clínica</a>
-                <a href="#horarios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Horários</a>
+                <a href="#profissional" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Quem cuida de você (Drª Nara)</a>
+                <a href="#depoimentos" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Depoimentos</a>
+                <a href="#horarios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Horários e localização</a>
+                <a href="#duvidas" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Dúvidas frequentes</a>
                 <a href="#contato" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-purple hover:bg-purple-50 rounded-md">Contato</a>
                 <a href="https://wa.me/554197110334" class="mt-4 w-full flex justify-center items-center gap-2 bg-brand-teal text-[#052b27] px-6 py-3 rounded-md font-medium shadow-sm">
                     <i aria-hidden="true" class="fa-brands fa-whatsapp text-lg"></i> Agendar Agora
@@ -82,13 +88,33 @@
     <!-- APRESENTAÇÃO DA FISIOTERAPEUTA -->
     <section id="inicio" aria-label="Nossa fisioterapeuta" class="pt-32 md:pt-40 pb-4 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <figure class="relative max-w-lg mx-auto overflow-hidden rounded-tr-[80px] rounded-bl-[80px] shadow-xl">
-                <img src="fisioterapeuta.jpeg" alt="Drª Nara Priscila Campos realizando atendimento de fisioterapia" width="1792" height="2390" fetchpriority="high" class="block w-full h-auto">
-                <figcaption class="pointer-events-none absolute top-2 sm:top-6 inset-x-4 sm:inset-x-8 bg-transparent text-center text-xs sm:text-sm leading-relaxed font-medium text-[#b000a5]">
-                    <span class="inline-block">Drª Nara Priscila Campos</span>
-                    <span class="inline-block">CREFITO: 202965-F</span>
-                </figcaption>
-            </figure>
+            <div class="intro-layout">
+                <div class="intro-copy">
+                    <div class="intro-message">
+                        <h2 class="intro-slogan">
+                            <span class="intro-slogan-line">Pois a <span class="intro-slogan-life">vida</span></span>
+                            <span class="intro-slogan-line">precisa de</span>
+                            <span class="intro-slogan-movement">
+                                movimento
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 200 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 10C60 7 140 12 198 7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                        </h2>
+                        <p class="intro-subtitle">Fisioterapia em Campina Grande do Sul, com avaliação individual.</p>
+                    </div>
+                    <a href="https://wa.me/554197110334" class="intro-cta bg-brand-purple hover:bg-brand-purple-light text-white rounded-md font-bold transition-all shadow-lg">
+                        <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
+                        <span>Fale com a Recepção</span>
+                    </a>
+                </div>
+                <figure class="intro-portrait">
+                    <img src="fisioterapeuta-nara.jpg" alt="Drª Nara Priscila Campos, fisioterapeuta, com jaleco rosa na clínica" width="1536" height="2048" fetchpriority="high" class="block w-full h-auto">
+                    <figcaption class="sr-only">
+                        Drª Nara Priscila Campos — CREFITO: 202965-F
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </section>
 
@@ -127,44 +153,34 @@
         </div>
     </section>
 
-    <!-- SESSÃO PRINCIPAL (HERO) -->
-    <section id="hero" class="pt-12 pb-20 md:pt-16 md:pb-32 hero-bg overflow-hidden">
-        <!-- Elementos decorativos de fundo -->
-        <div class="shape-blob w-96 h-96 -top-10 -right-20"></div>
-        <div class="shape-blob w-72 h-72 bottom-0 -left-20 bg-brand-purple opacity-5"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-3xl mx-auto">
-
-                <!-- Textos -->
-                <div class="w-full text-center">
-
-                    <!-- Slogan com a tipografia inspirada na imagem -->
-                    <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-2">
-                        Pois a <span class="font-cursive text-brand-purple text-6xl md:text-7xl font-normal lowercase tracking-wide">vida</span>
-                    </h2>
-                    <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">
-                        precisa de <br>
-                        <span class="font-cursive text-brand-teal text-6xl md:text-7xl font-normal lowercase tracking-wide relative inline-block mt-2">
-                            movimento
-                            <!-- Linha curva decorativa embaixo da palavra -->
-                            <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 13C50 3 150 3 198 13" stroke="#7A0099" stroke-width="4" stroke-linecap="round"/>
-                            </svg>
-                        </span>
-                    </h2>
-
-                    <p class="mt-8 text-lg text-gray-600 mb-8 max-w-lg mx-auto">
-                        Atendimento humanizado e reabilitação especializada para você voltar a realizar suas atividades diárias sem limitações.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://wa.me/554197110334" class="bg-brand-purple hover:bg-brand-purple-light text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg flex items-center justify-center gap-2">
-                            <i aria-hidden="true" class="fa-brands fa-whatsapp text-xl"></i> Fale com a Recepção
-                        </a>
-                    </div>
-                </div>
-
+    <!-- TRATAMENTOS: serviços informados pela clínica -->
+    <section id="tratamentos" class="content-section section-soft" aria-labelledby="tratamentos-titulo">
+        <div class="section-container">
+            <p class="section-eyebrow">Cuidado para o seu dia a dia</p>
+            <h2 id="tratamentos-titulo" class="section-title">Tratamentos</h2>
+            <p class="section-intro">Cada atendimento começa com uma avaliação completa para entender a origem da sua dor e montar um plano só seu.</p>
+            <div class="treatments-grid">
+                <article class="treatment-card">
+                    <i aria-hidden="true" class="fa-solid fa-bone treatment-icon"></i>
+                    <h3>Traumato-ortopedia</h3>
+                    <p>Recuperação de fraturas, cirurgias, lesões articulares e musculares, com plano de reabilitação para cada fase.</p>
+                </article>
+                <article class="treatment-card">
+                    <i aria-hidden="true" class="fa-solid fa-hand-holding-heart treatment-icon"></i>
+                    <h3>Tratamento para dores em geral</h3>
+                    <p>Dores na coluna, nas articulações e nos músculos. Avaliamos a origem da dor, não só o sintoma.</p>
+                </article>
+                <article class="treatment-card">
+                    <i aria-hidden="true" class="fa-solid fa-person-walking treatment-icon"></i>
+                    <h3>Treino funcional</h3>
+                    <p>Exercícios orientados para ganhar força, mobilidade e segurança nos movimentos do dia a dia.</p>
+                </article>
+                <article class="treatment-card">
+                    <i aria-hidden="true" class="fa-regular fa-comments treatment-icon"></i>
+                    <h3>Cone hindu</h3>
+                    <!-- Descrição aguardando texto da clínica. -->
+                    <a href="https://wa.me/554197110334?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20cone%20hindu." class="section-link">Saiba mais com a recepção <span aria-hidden="true">→</span></a>
+                </article>
             </div>
         </div>
     </section>
@@ -184,7 +200,7 @@
 
                 <!-- Texto Sobre -->
                 <div class="w-full lg:w-1/2">
-                    <span class="text-brand-teal font-semibold uppercase tracking-wider text-sm">Nossa Estrutura</span>
+                    <span class="text-brand-teal font-semibold uppercase tracking-wider text-sm">A Clínica</span>
                     <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">Atendimento dedicado em Campina Grande do Sul</h2>
                     <p class="text-gray-600 mb-6 leading-relaxed">
                         Na <strong>FisioCampos</strong>, somos especialistas em reabilitação física. Nosso espaço clínico foi cuidadosamente pensado para oferecer tratamentos confortáveis e eficazes, unindo profissionais experientes à uma estrutura adequada para a sua recuperação.
@@ -194,7 +210,7 @@
                     </p>
 
                     <div class="bg-gray-50 border-l-4 border-brand-purple p-6 rounded-r-lg">
-                        <h4 class="font-bold text-gray-900 mb-2">Por que escolher a FisioCampos?</h4>
+                        <h3 class="font-bold text-gray-900 mb-2">Por que escolher a FisioCampos?</h3>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-2 text-gray-700 text-sm">
                                 <i aria-hidden="true" class="fa-solid fa-check text-brand-teal"></i> Abordagem individualizada
@@ -209,6 +225,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- QUEM CUIDA DE VOCÊ -->
+    <section id="profissional" class="content-section bg-white" aria-labelledby="profissional-titulo">
+        <div class="section-container professional-layout">
+            <div>
+                <p class="section-eyebrow">Quem cuida de você</p>
+                <h2 id="profissional-titulo" class="section-title">Drª Nara Priscila Campos</h2>
+                <p class="professional-registration">Fisioterapeuta · CREFITO 202965-F</p>
+            </div>
+            <div class="professional-copy">
+                <h3>Um plano de cuidado pensado para você</h3>
+                <p>O atendimento começa com uma avaliação completa para entender a origem da sua dor e planejar a sua reabilitação.</p>
+                <p>Na FisioCampos, o cuidado é individualizado, com atenção aos movimentos e às atividades do seu dia a dia.</p>
+                <a href="https://wa.me/554197110334" class="section-link">Agende sua avaliação <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS: incluir relatos reais quando fornecidos pela clínica. -->
+    <section id="depoimentos" class="content-section section-soft" aria-labelledby="depoimentos-titulo">
+        <div class="section-container">
+            <h2 id="depoimentos-titulo" class="section-title">Depoimentos</h2>
         </div>
     </section>
 
@@ -290,21 +330,60 @@
         </div>
     </section>
 
-    <!-- BANNER CALL TO ACTION -->
-    <section class="appointment-banner py-16 relative overflow-hidden">
+    <!-- DÚVIDAS FREQUENTES -->
+    <section id="duvidas" class="content-section bg-white" aria-labelledby="duvidas-titulo">
+        <div class="section-container faq-layout">
+            <div>
+                <p class="section-eyebrow">Antes da sua visita</p>
+                <h2 id="duvidas-titulo" class="section-title">Dúvidas frequentes</h2>
+                <p class="section-intro">Informações para facilitar o seu atendimento.</p>
+                <a href="https://wa.me/554197110334" class="section-link">Fale com a recepção <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>Como funciona a primeira consulta?</summary>
+                    <p>Cada atendimento começa com uma avaliação completa para entender a origem da sua dor e montar um plano só seu.</p>
+                </details>
+                <details>
+                    <summary>Quais tratamentos a clínica oferece?</summary>
+                    <p>Traumato-ortopedia, tratamento para dores em geral, treino funcional e cone hindu. <a href="#tratamentos">Conheça os tratamentos.</a></p>
+                </details>
+                <details>
+                    <summary>Como agendo meu horário?</summary>
+                    <p>Pelo <a href="https://wa.me/554197110334">WhatsApp (41) 97110-334</a>. O atendimento é com hora marcada.</p>
+                </details>
+                <details>
+                    <summary>Onde fica a clínica?</summary>
+                    <p>Na Rua Augusto Staben, 2201, bairro Jardim Paulista, em Campina Grande do Sul – PR. <a href="#horarios">Veja os horários e como chegar.</a></p>
+                </details>
+                <details>
+                    <summary>Vocês atendem convênio?</summary>
+                    <p>Fale com a recepção para consultar as modalidades de atendimento e as formas de pagamento disponíveis.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="appointment-banner py-16 relative overflow-hidden" aria-labelledby="contato-titulo">
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Sente alguma dor que limita seu dia a dia?</h2>
-            <p class="appointment-description text-lg mb-8">Nossa equipe de fisioterapia está pronta para avaliar seu caso e devolver a sua qualidade de vida.</p>
+            <p class="section-eyebrow">Contato</p>
+            <h2 id="contato-titulo" class="font-heading text-3xl md:text-4xl font-bold mb-4">Vamos agendar sua avaliação?</h2>
+            <p class="appointment-description text-lg mb-8">Fale com a recepção para tirar suas dúvidas e encontrar um horário para você.</p>
             <a href="https://wa.me/554197110334" class="appointment-button inline-flex items-center gap-2 px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg transform hover:-translate-y-1">
                 <i aria-hidden="true" class="fa-brands fa-whatsapp text-2xl"></i> Agendar Avaliação
             </a>
+            <div class="contact-links">
+                <a href="https://wa.me/554197110334">WhatsApp: (41) 97110-334</a>
+                <a href="tel:+554136792756">Telefone: (41) 3679-2756</a>
+            </div>
         </div>
     </section>
 
     </main>
 
     <!-- RODAPÉ -->
-    <footer id="contato" class="site-footer pt-16 pb-8">
+    <footer class="site-footer pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 border-b footer-divider pb-12">
 
@@ -323,17 +402,22 @@
 
                 <!-- Links Rápidos -->
                 <div>
-                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Navegação</h3>
+                    <h3 class="footer-purple font-bold mb-4 uppercase tracking-wider text-sm">Navegação</h3>
                     <ul class="space-y-2">
                         <li><a href="#inicio" class="footer-muted hover:text-teal-200 transition-colors text-sm">Início</a></li>
-                        <li><a href="#sobre" class="footer-muted hover:text-teal-200 transition-colors text-sm">Nossa Estrutura</a></li>
-                        <li><a href="#horarios" class="footer-muted hover:text-teal-200 transition-colors text-sm">Horários</a></li>
+                        <li><a href="#tratamentos" class="footer-muted transition-colors text-sm">Tratamentos</a></li>
+                        <li><a href="#sobre" class="footer-muted transition-colors text-sm">A Clínica</a></li>
+                        <li><a href="#profissional" class="footer-muted transition-colors text-sm">Quem cuida de você (Drª Nara)</a></li>
+                        <li><a href="#depoimentos" class="footer-muted transition-colors text-sm">Depoimentos</a></li>
+                        <li><a href="#horarios" class="footer-muted transition-colors text-sm">Horários e localização</a></li>
+                        <li><a href="#duvidas" class="footer-muted transition-colors text-sm">Dúvidas frequentes</a></li>
+                        <li><a href="#contato" class="footer-muted transition-colors text-sm">Contato</a></li>
                     </ul>
                 </div>
 
                 <!-- Contato -->
                 <div>
-                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Fale Conosco</h3>
+                    <h3 class="footer-purple font-bold mb-4 uppercase tracking-wider text-sm">Fale Conosco</h3>
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-sm footer-muted">
                             <i aria-hidden="true" class="fa-solid fa-phone footer-teal"></i> (41) 3679-2756
